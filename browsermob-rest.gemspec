@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["THamilton2014@gmail.com"]
 
   spec.summary       = %q{Browsermob Rest Client}
-  spec.homepage      = "https://github.com/thamilton2014"
+  spec.homepage      = "https://github.com/thamilton2014/browsermob-rest"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
