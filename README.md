@@ -20,6 +20,15 @@ Or install it yourself as:
 
 ## Usage
 
+Starting the Browsermob Server (Optional)
+
+```ruby
+server = Browsermob::Server.new("path-to-jar", background: true)
+server.start
+# Do something 
+server.stop
+```
+
 Configure the base url of your Browsermob proxy
 
 ```ruby
