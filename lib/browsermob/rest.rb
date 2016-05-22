@@ -1,13 +1,14 @@
 #
 # rest.rb
 #
-require "browsermob/rest/version"
+# require_relative "browsermob/rest/version"
 require "rest-client"
 
 module Browsermob
   module Rest
 
     require_relative "rest/api"
+    require_relative "rest/version"
 
     module Services
         require_relative "rest/services/base_service"
