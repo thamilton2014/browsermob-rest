@@ -1,5 +1,9 @@
+#
+# rest.rb
+#
 require "browsermob/rest/version"
 require "rest-client"
+
 module Browsermob
   module Rest
 
