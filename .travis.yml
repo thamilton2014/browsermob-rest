@@ -1,3 +1,4 @@
+---
 sudo: false
 language: ruby
 rvm:
@@ -9,3 +10,8 @@ deploy:
     secure: 2kqrl2SaKnzMIFpjIjo765mF5eN+2bk2n0D/QKfvB+siFF+99kQth9RnhPYUfsFdIZ9+zJwv07/pfRbGBHZWRcULOirG+JPolV2HdGOPNz0Ns5XFMae3ZZjbHR7tKKaR+cz1UXvVQInRu+Na8PhvzId1gvcfyYwwjUoaJmlbz7WiC8fEn7xBY8A8MpPj5+wG13f4en2c54IHmQ1BtjH5CzjupEOP//vXXwZK5xk8fdMDRMiD2+0xVreSiD8laOaQj6Mu21hDuv8U6BiK3M3pQM3tlb4B2l9BhJL4ggRXOEdU2Dry58RXoU+iJBLo16++CoyELX5F453CWfQyIHU0GDMKGzsz2isnB5iq+zqlLM+7Uog990yTvWBUHNV6MQUKQN8mmcy6c0pIfuX4bB6nBPcP6F+pG4X/jU5BoMrnJhiSlGh6Y/EPKWZpOYv5RYSu/oa/gSskig1uSorJUd54SMKWZxY4obyLXnWcuNZwj++knn1qJs6xB8B5JNvH21PR18JZfdyy9jBGwRE20MFBu69ZWZ0o5KEqU3LkASxlrk83UsRXp39AB7SmXNs9kieYpiXgUAKAiGwKoodpjoqo9EglZCRerBzJ+keMljCuCKZLGEVBB0v9ivTPF8db+UE5FvadGy/st6V8gTPIiO81AIwXg/ZI57x6OCrv9QsULXk=
   on:
     branch: master
+# [Reference] https://chrisdown.name/2015/09/27/auto-merging-successful-builds-from-travis-ci.html
+after_success:
+  - "curl -o /tmp/travis-automerge https://raw.githubusercontent.com/cdown/travis-automerge/master/travis-automerge"
+  - "chmod a+x /tmp/travis-automerge"
+  - "BRANCHES_TO_MERGE_REGEX='^f/' BRANCH_TO_MERGE_INTO=development GITHUB_REPO=cdown/srt /tmp/travis-automerge"
