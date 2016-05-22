@@ -24,23 +24,19 @@ module Browsermob
                         Util::Config.get("endpoints.base_url")
                     end
 
-                    def add_request(endpoint, data)
-                        url = base_url() + endpoint
+                    def add_request(url, data)
                         RestClient.post(url, data, get_headers())
                     end
 
-                    def remove_request(endpoint)
-                        url = base_url() + endpoint
+                    def remove_request(url)
                         RestClient.delete(url, get_headers())
                     end
 
-                    def update_request(endpoint, data)
-                        url = base_url() + endpoint
+                    def update_request(url, data)
                         RestClient.put(url, data, get_headers())
                     end
 
-                    def get_request(endpoint)
-                        url = base_url() + endpoint
+                    def get_request(url)
                         RestClient.get(url, get_headers())
                     end
 
