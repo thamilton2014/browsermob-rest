@@ -23,5 +23,5 @@ module Browsermob
         require_relative "rest/util/endpoints"
     end
 
-  end
-end
+  end # => Rest
+end # => Browsermob

@@ -65,8 +65,9 @@ module Browsermob
                         get_value(index, value[key]) :
                         value[key]
                     end
-                end
-            end
-        end
-    end
-end
+
+                end # => Self
+            end # => Config
+        end # => Util
+    end # => Rest
+end # => Browsermob

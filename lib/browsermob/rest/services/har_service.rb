@@ -22,8 +22,8 @@ module Browsermob
                         response = update_request(url, data)
                     end
 
-                end # => 
-            end # => 
-        end # => 
-    end # => 
-end # => 
+                end # => Self
+            end # => HarService
+        end # => Services
+    end # => Rest
+end # => Browsermob

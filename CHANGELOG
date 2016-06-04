@@ -1,0 +1,13 @@
+0.1.2 (2016-06-04)
+==================
+
+Specs:
+    * Added unit tests for string patters on versioning
+
+Services:
+    * Added "response" variable to all rest requests for later use
+    * Added Class/Modules endings
+
+TODO:
+    * Finish commenting in API interface
+    * Finish implementing integration tests via Cucumber
