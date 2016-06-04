@@ -23,7 +23,7 @@ module Browsermob
                 PROXY_PORT_RETRY            = "proxy/%s/retry/"
                 PROXY_PORT_DNS_CACHE        = "proxy/%s/dns/cache/"
 
-            end # => 
-        end # => 
-    end # => 
-end # => 
+            end # => Endpoints
+        end # => Util
+    end # => Rest
+end # => Browsermob

@@ -16,7 +16,6 @@ module Browsermob
                         {
                             :content_type => content_type,
                             :accept => 'application/json',
-                            # :Authorization => "Basic #{BaseService.api_key}"
                         }
                     end 
 
@@ -40,9 +39,8 @@ module Browsermob
                         RestClient.get(url, get_headers())
                     end
 
-
-                end # => 
-            end # => 
-        end # => 
-    end # => 
-end # => 
+                end # => Self
+            end # => BaseService
+        end # => Services
+    end # => Rest
+end # => Browsermob

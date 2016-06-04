@@ -9,21 +9,21 @@ module Browsermob
 
                     def get_proxy_blacklist(port)
                         url = base_url + sprintf(Util::Endpoints::PROXY_PORT_BLACKLIST, port)
-                        get_request(url)
+                        response = get_request(url)
                     end
 
                     def update_proxy_blacklist(port, list)
                         url = base_url + sprintf(Util::Endpoints::PROXY_PORT_BLACKLIST, port)
-                        update_request(url, list)
+                        response = update_request(url, list)
                     end
 
                     def remove_proxy_blacklist(port)
                         url = base_url + sprintf(Util::Endpoints::PROXY_PORT_BLACKLIST, port)
-                        remove_request(url)
+                        response = remove_request(url)
                     end
 
-                end # => 
-            end # => 
-        end # => 
-    end # => 
-end # => 
+                end # => Self
+            end # => BlacklistService
+        end # => Services
+    end # => Rest
+end # => Browsermob
